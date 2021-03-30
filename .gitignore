@@ -1,0 +1,4 @@
+**/node_modules
+
+# Don't include models, let the tester create their own
+**/models
