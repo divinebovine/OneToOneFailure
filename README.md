@@ -19,6 +19,7 @@ This repository exists to reproduce a bug found in sequelize auto model generati
 ## Testing
 
 1. Run `docker-compose up --build -d`
+
 2. Connect to database
 ```sh
 psql "hostaddr=127.0.0.1 \
@@ -27,6 +28,7 @@ user=postgres \
 password=SomePassword \
 dbname=postgres"
 ```
+
 3. Inspect the schema
 ```sh
 \d foos
@@ -36,12 +38,15 @@ dbname=postgres"
 \d bars
 ```
 ![](./docs/images/bars.png)
+
 4. Install node dependencies:
 ```sh
 npm i
 ```
+
 5. Generate models:
 ```sh
 npm start
 ```
+
 6. Confirm `models/init-models.js` models the relationship as a one to many (foo -> bars).
